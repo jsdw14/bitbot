@@ -1,5 +1,5 @@
 {
-    "name": "bitbot",
+    "name": "bitbot line follow",
     "description": "",
     "dependencies": {
         "core": "*",

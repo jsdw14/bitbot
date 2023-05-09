@@ -1,6 +1,7 @@
 input.onButtonPressed(Button.A, function () {
     bitbot.ledRainbow()
-    while (line % 2 == 0) {
+    basic.showIcon(IconNames.Happy)
+    while (true) {
         while (bitbot.readLine(BBLineSensor.Left) == 0) {
             bitbot.move(BBMotor.Left, BBDirection.Forward, 20)
             bitbot.move(BBMotor.Right, BBDirection.Forward, 5)
@@ -11,19 +12,8 @@ input.onButtonPressed(Button.A, function () {
         }
     }
 })
-input.onButtonPressed(Button.AB, function () {
-    line += 1
-})
-input.onButtonPressed(Button.B, function () {
-    line += 1
-    bitbot.setLedColor(0xFF0000)
-    bitbot.goms(BBDirection.Reverse, 40, 400)
-})
-let line = 0
 bitbot.select_model(BBModel.XL)
-line = 0
+let line = 0
 bitbot.ledBrightness(20)
 bitbot.setLedColor(0xFF0000)
-basic.forever(function () {
-    basic.showNumber(line)
-})
+basic.showIcon(IconNames.Duck)
